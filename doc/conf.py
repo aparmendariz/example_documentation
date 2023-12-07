@@ -43,6 +43,8 @@ extensions = [
 #To include the numpy docstrings in the init: 
 napoleon_include_init_with_doc = True
 
+autosummary_generate = True
+
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
