@@ -15,10 +15,18 @@ release = '0.1'
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
-extensions = ['myst_parser']
+# Setting the sys path to make sphinx find the python modules in the parent directory:
+import os
+import sys
+sys.path.insert(0, os.path.abspath("."))
 
-templates_path = ['_templates']
-exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
+#Adding the autodoc extension to be able to extract documentation from docstrings:
+#Napoleon extension to parse Numpy docstrings 
+#Mathjax to render latex math equations (just in case)
+extensions = ['myst_parser', 'sphinx.ext.autodoc', 'sphinx.ext.napoleon', 'sphinx.ext.mathjax']
+#To include the numpy docstrings in the init: 
+napoleon_include_init_with_doc = True
+
 
 
 # -- Options for HTML output -------------------------------------------------
