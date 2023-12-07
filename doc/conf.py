@@ -23,7 +23,7 @@ release = '0.1'
 
 import os
 import sys
-sys.path.insert(0, os.path.abspath('..'))
+sys.path.insert(0, os.path.abspath('.'))
 
 # --  Extensions ---------------------------------------------------
 
@@ -39,6 +39,7 @@ extensions = [
     'sphinx.ext.mathjax',
     'sphinx.ext.napoleon',
 ]
+
 #To include the numpy docstrings in the init: 
 napoleon_include_init_with_doc = True
 
