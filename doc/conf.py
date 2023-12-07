@@ -23,7 +23,15 @@ sys.path.insert(0, os.path.abspath("."))
 #Adding the autodoc extension to be able to extract documentation from docstrings:
 #Napoleon extension to parse Numpy docstrings 
 #Mathjax to render latex math equations (just in case)
-extensions = ['myst_parser', 'sphinx.ext.autodoc', 'sphinx.ext.napoleon', 'sphinx.ext.mathjax']
+
+extensions = [
+    'sphinx.ext.autodoc',
+    'sphinx.ext.autosummary',
+    'sphinx.ext.coverage',
+    'sphinx.ext.intersphinx',
+    'sphinx.ext.mathjax',
+    'sphinx.ext.napoleon',
+]
 #To include the numpy docstrings in the init: 
 napoleon_include_init_with_doc = True
 
